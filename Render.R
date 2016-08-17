@@ -26,27 +26,28 @@ text_new <- c(text[1:290],d_link,text[291:length(text)])
 write(text_new, file = "./_site/cv.html")
 
 
-#Create updates to git
-
 #Copy Website & Source
 loc<- "/Users/alex/alexsingleton/"
 system(paste("cp -a",paste0(getwd(),"/_site/."), loc)) #Copy rendered website
 loc<- "/Users/alex/personal_site_source/"
-system(paste("cp -a",paste0(getwd(),"/."), loc)) #Copy rendered website
+system(paste("cp -a",paste0(getwd(),"/."), loc)) #Copy source
 
 
-#GIT
+#GIT Website
+loc<- "/Users/alex/alexsingleton/"
 system(paste0("cd ",loc," && git add .")) #add files to the staging area
 system("git remote add origin ssh://git@github.com:alexsingleton/alexsingleton.github.io.git") #set the origin - note; need to setup the SSH
 system(paste0("cd ",loc," && git commit -m 'Website update'")) #commit changes
 system(paste0("cd ",loc," && git push -u origin master")) #Push
 
 #Source
+loc<- "/Users/alex/personal_site_source/"
 system(paste0("cd ",loc," && git add .")) #add files to the staging area
 system("git remote add origin ssh://git@github.com:alexsingleton/personal_site_source.git") #set the origin - note; need to setup the SSH
 system(paste0("cd ",loc," && git commit -m 'Website source update'")) #commit changes
 system(paste0("cd ",loc," && git push -u origin master")) #Push
 
+test
 
 
 
