@@ -37,4 +37,4 @@ output:
     highlight: textmate
     include:
         after_body: footer.html
-exclude: ["*.csv", "*.bib"] 
+exclude: ["*.csv", "*.bib","*.sh","*.R"] 
