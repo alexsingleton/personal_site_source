@@ -47,9 +47,9 @@ system("git remote add origin ssh://git@github.com:alexsingleton/personal_site_s
 system(paste0("cd ",loc," && git commit -m 'Website source update'")) #commit changes
 system(paste0("cd ",loc," && git push -u origin master")) #Push
 
-test
+system("git remote set-url origin git@github.com:alexsingleton/personal_site_source.git")
 
-
+test2
 
 
 
