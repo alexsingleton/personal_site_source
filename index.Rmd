@@ -1,0 +1,58 @@
+---
+title: ""
+---
+<!--html_preserve-->
+<style type="text/css">
+
+.main-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+
+<div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Alex Singleton</h1>
+      <p>Professor of Geographic Information Science at the University of Liverpool.  If you are interested in my blog posts, these can now be found at the <a href="">Geographic Data Science Lab</a>.</p>
+      <p><a class="btn btn-primary btn-lg" href="publications.html" role="button">My publications</a></p>
+    </div>
+ </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2>MSc Geographic Data Science</h2>
+          <img src="./images/MSCGDS.png" alt="GDSL" class="pull-left gap-right">
+          <p>We have an excellent MSc in the emerging area of Geographic Data Science and is accepting applications. We have an <a href ="https://spark.adobe.com/page/e6XbJ/">e-brochure</a>, and you can click <a href="https://www.liverpool.ac.uk/study/postgraduate/taught/geographic-data-science-msc/overview/">here</a> to get an overview of the course or find out how to apply.</p>
+        </div>
+        <div class="col-md-6">
+          <h2>Geographic Data Science Lab</h2>
+          <img src="./images/GDSL.png" alt="GDSL" class="pull-left gap-right">
+          <p><a href = "https://geographicdatascience.com/">GDSL</a> are a collective of researchers with interests in the fusion of Data Science, GIS and their appropriate use. You can find our blog <a href = "https://geographicdatascience.com/blog/">here</a>. We are always interested in hearing from new collaborators and welcome visitors.</p>
+       </div>
+      </div>
+
+ <div class="row">
+        <div class="col-md-8">
+        	<h2>Biography</h2>
+          	<p> I am a Professor of Geographic Information Science at the University of Liverpool and Deputy Director of the <a href="http://www.cdrc.ac.uk">ESRC Consumer Data Research Centre</a> (CDRC). Prior to this I worked at University College London as a researcher and is also where I completed my PhD. In a general sense my research is concerned with how the complexities of individual behaviours manifest spatially and can be represented and understood though a framework of geographic data science.</p>
+			<p>In particular, this research has extended a tradition of area classification and I have developed a broad critique of the ways in which geodemographic methods can be refined through modern scientific approaches to data mining, geographic information science and quantitative human geography. I am an avid R user, and also advocate of <a href="http://dx.doi.org/10.1080/13658816.2015.1137579">Open Geographic Information Science</a>.</p>
+        </div>
+
+        <div class="col-md-4">
+        <h2>Impact</h2>
+			<p>Where appropriate I try to make my academic work accessible, with some examples of these activities including:</p>
+			<div class="list-group">
+				<a href="https://observatory.cartodb.com/editor/5de68840-16ef-11e6-bf4f-0ea31932ec1d/embed" class="list-group-item">USA Geodemographics</a>
+				<a href="https://data.cdrc.ac.uk/product/cdrc-2011-census-open-atlas" class="list-group-item">2011 Census Atlas</a>
+				<a href="https://data.cdrc.ac.uk/product/cdrc-2011-transport-map-book" class="list-group-item">Transportation Map Book</a>
+				<a href="http://www.educationalprofiler.org" class="list-group-item">Education Profiler</a>
+				<a href="http://www.policestreets.co.uk" class="list-group-item">Police Streets</a>
+			</div>
+		</div>
+
+</div>
+<!--/html_preserve-->

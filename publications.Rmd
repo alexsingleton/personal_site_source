@@ -1,0 +1,34 @@
+---
+title: "Publications"
+---
+
+```{r echo=FALSE,warning=FALSE,message=FALSE}
+library(RefManageR)
+```
+
+#Books
+```{r echo=FALSE, results="asis",comment=FALSE}
+file_books <- ReadBib("books.bib")
+dates <- unlist(unique(file_books$year))[order(unlist(unique(file_books$year)),decreasing = TRUE)]
+#Prints recerences
+for (date in dates) {
+  print(file_books[list(year=date)],.opts = list(style="markdown",bib.style ="authoryear" ,max.names =10,dashed=FALSE))
+  cat("\n")
+}
+
+```
+
+#Journal Articles
+```{r echo=FALSE, results="asis",comment=FALSE}
+file_journals <- ReadBib("journals.bib")
+dates <- unlist(unique(file_journals$year))[order(unlist(unique(file_journals$year)),decreasing = TRUE)]
+
+#Prints recerences
+for (date in dates) {
+  cat(paste0("##",date),"\n")
+  print(file_journals[list(year=date)],.opts = list(style="markdown",bib.style ="authoryear" ,max.names =10,dashed=FALSE))
+  cat("\n")
+}
+
+```
+

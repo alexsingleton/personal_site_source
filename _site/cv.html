@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Alex Singleton</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet"
+      href="site_libs/highlight/textmate.css"
+      type="text/css" />
+<script src="site_libs/highlight/highlight.js"></script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+.section h2 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h3 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h4 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h5 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h6 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Alex Singleton</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="publications.html">
+    <span class="fa fa-book  fa-2x"></span>
+     
+    Publications
+  </a>
+</li>
+<li>
+  <a href="cv.html">
+    <span class="fa fa-file  fa-2x"></span>
+     
+    CV
+  </a>
+</li>
+<li>
+  <a href="http://www.geographicdatascience.org">
+    <span class="fa fa-thumbs-up fa-2x"></span>
+     
+    GDSL Blog
+  </a>
+</li>
+<li>
+  <a href="https://speakerdeck.com/alexsingleton">
+    <span class="fa fa-slideshare fa-2x"></span>
+     
+    Presentations
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-video-camera fa-2x"></span>
+     
+    Videos
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://www.youtube.com/playlist?list=PL-UaqBHqfc-H0HfqgOeFFyP17KnkG-aSY">
+        <span class="fa fa-youtube  fa-2x"></span>
+         
+        YouTube
+      </a>
+    </li>
+    <li>
+      <a href="https://vimeo.com/album/4097174">
+        <span class="fa fa-vimeo  fa-2x"></span>
+         
+        Vimeo
+      </a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/alexsingleton">
+    <span class="fa fa-github fa-2x"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/alexsingleton">
+    <span class="fa fa-twitter fa-2x"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://uk.linkedin.com/in/alexdsingleton">
+    <span class="fa fa-linkedin fa-2x"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Alex Singleton</h1>
+
+</div>
+
+
+
+<style type="text/css">
+ul.CV {
+list-style-type: none;
+}
+</style>
+
+<ul class="CV">
+<li>
+<i class="fa fa-home" aria-hidden="true"></i> University of Liverpool, Department of Geography and Planning, Gordon Stephenson Building,Liverpool, L69 7ZQ
+</li>
+<li>
+<i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:alex.singleton@liverpool.ac.uk">alex.singleton@liverpool.ac.uk</a>
+</li>
+<li>
+<i class="fa fa-mobile" aria-hidden="true"></i> +44 (0)151 7943108
+</li>
+<li>
+<i class="fa fa-globe" aria-hidden="true"></i> <a href="www.alex-singleton.com" class="uri">www.alex-singleton.com</a>
+</li>
+<li>
+<i class="fa fa-clock-o" aria-hidden="true"></i> Last Updated: August 17, 2016
+<li><i class='fa fa-download' aria-hidden='true'></i><a href='cv_Alex_Singleton.pdf'> Download CV (pdf)</a></li>
+</li>
+</ul>
+<hr />
+<div id="education" class="section level1">
+<h1>Education</h1>
+<ul>
+<li>2003 - 07
+<ul>
+<li>PhD in Geography (Examined Dec. 2007) - University College London, UK.</li>
+</ul></li>
+<li>2000 - 03
+<ul>
+<li>BSc (1st class Hons) in Geography - University of Manchester, UK.</li>
+</ul></li>
+</ul>
+<hr />
+</div>
+<div id="awards-honors-and-distinctions" class="section level1">
+<h1>Awards Honors and Distinctions</h1>
+<ul>
+<li>2016
+<ul>
+<li>Visiting Professor Ritsumeikan University, Japan.</li>
+<li>Europe, Middle East and Africa Editor - Transactions in GIS.</li>
+</ul></li>
+<li>2014
+<ul>
+<li>Chair of the Royal Geographical Society (with IBG) GIScience Research Group.</li>
+<li>Associate Editor of the Spatial Analytics Book Series (Sage).</li>
+</ul></li>
+<li>2013
+<ul>
+<li>Honorary Visiting Researcher Ritsumeikan University, Japan.</li>
+</ul></li>
+<li>2012
+<ul>
+<li>Founding Editor in Chief of Regional Studies, Regional Science.</li>
+<li>Book Review Editor for Environment and Planning B.</li>
+<li>Chair GIS Research UK (GISRUK) 2013 Annual Conference.</li>
+</ul></li>
+<li>2011
+<ul>
+<li>Shortlisted for Scopus Young Researcher Award (Social Science).</li>
+<li>Royal Geographical Society Gildea Award.</li>
+</ul></li>
+<li>2010
+<ul>
+<li>Chair of the Output Area Classification User Group at the Royal Statistical Society.</li>
+</ul></li>
+<li>2009
+<ul>
+<li>Winner GIS Research UK Annual Conference Mashup Competition.</li>
+</ul></li>
+<li>2008
+<ul>
+<li>Chair of the Royal Geographical Society Quantitative Methods Research Group.</li>
+</ul></li>
+<li>2006
+<ul>
+<li>Winner GIS Research UK Annual Conference Poster Competition.</li>
+</ul></li>
+<li>2004
+<ul>
+<li>Winner UCL Graduate School Poster Competition.</li>
+</ul></li>
+<li>2003
+<ul>
+<li>Winner of Manchester Geographical Association Dissertation Prize.</li>
+</ul></li>
+</ul>
+<hr />
+</div>
+<div id="research-interests" class="section level1">
+<h1>Research Interests</h1>
+<p>Within a framework of Geographic Information Science, my research has extended a tradition of area classification in Geography. I have developed an empirically informed critique of the ways in which geodemographic methods can be refined for effective yet ethical use in public resource allocation applications. This research has developed from substantive interests in the investigation of the social, spatial and temporal dimensions of access inequalities in Higher Education. In addition to this core research agenda, I have also explored issues of digital exclusion, aspects of retail, school commuting behaviour, as well as the ways in which new mapping tools and techniques can be utilised in activities related to the public understanding of science. I am an advocate of open source data and software, and the majority of my research (and research led teaching) involve the use of open geocomputation with large administrative or crowd sourced datasets.</p>
+<hr />
+</div>
+<div id="academic-roles" class="section level1">
+<h1>Academic Roles</h1>
+<ul>
+<li>2015 -
+<ul>
+<li>Professor - University of Liverpool, Department of Geography and Planning.</li>
+</ul></li>
+<li>2013 - 14
+<ul>
+<li>Reader - University of Liverpool, Department of Geography and Planning.</li>
+</ul></li>
+<li>2010 - 13
+<ul>
+<li>Lecturer - University of Liverpool, Department of Geography and Planning.</li>
+</ul></li>
+<li>2005 - 2010
+<ul>
+<li>Research Fellow - University College London, Department of Geography.</li>
+</ul></li>
+<li>2003-2005
+<ul>
+<li>Research Assistant - University College London, Department of Geography.</li>
+</ul></li>
+</ul>
+<hr />
+</div>
+<div id="research-income-and-grants" class="section level1">
+<h1>Research Income and Grants</h1>
+<p>This following section provides a summary of research income to date which totals £9,162,118, with £911,511 as Principal Investigator (PI) and £8,250,607 as Co-Investigator (Co-I).</p>
+<ul>
+<li>2016
+<ul>
+<li><em>ESRC</em> Northern Regional Data Facility (PI) <strong>£309,681 </strong></li>
+<li><em>ESRC</em> Smart Street Sensor (Co-I) <strong>£301,681 </strong></li>
+</ul></li>
+<li>2014
+<ul>
+<li><em>ESRC</em> Retail Business Data Safe (Co-I) <strong>£6,117,615 </strong></li>
+<li><em>ESRC</em> The analysis of names from the 2011 Census of Population. (Co-I) <strong>£170,553 </strong></li>
+<li><em>ESRC</em> Population Change and Geographic Inequalities in the UK, 1971-2011 (Co-I) <strong>£198,315 </strong></li>
+<li><em>University of Liverpool</em> Big Data Visu- alisation of Broadband Equity (PI) <strong>£4,000 </strong></li>
+</ul></li>
+<li>2013
+<ul>
+<li><em>ESRC</em> Mapping Retail Sector Business Rate Inequalities. (PI) <strong>£58,404 </strong></li>
+<li><em>ESRC</em> The e- Resilience of British Retail Centres: Creating a nation model of retail area resilience to online shopping. (PI) <strong>£127,991 </strong></li>
+<li><em>ESRC</em> Leveraging the Google Cloud to Estimate Individual Level CO2 Emissions Linked to the School Commute. (PI) <strong>£118,481 </strong></li>
+</ul></li>
+<li>2012
+<ul>
+<li><em>ESRC</em> Using Secondary Data to Measure, Monitor and Visualise Spatio-Temporal Uncertainties in Geodemographic Classification. (PI) <strong>£182,397 </strong></li>
+<li><em>ESRC</em> A Spatial Microsimulation Model of Co-morbidity. (Co-I) <strong>£198,485 </strong></li>
+<li><em>EU INTERREG</em> PURE HUBS (Co-I) <strong>£679,365 </strong></li>
+<li><em>ESRC</em> Supporting undergraduate teaching in quantitative geography: making the connection be- tween schools, universities and workplaces. (Co-I) <strong>£99,000 </strong></li>
+<li><em>Royal Geographical Society</em> CO2 emissions and the commute to school. (PI) <strong>£2,900 </strong></li>
+<li><em>University of Liverpool</em> North American Geodemographics (PI) <strong>£5,000 </strong></li>
+</ul></li>
+<li>2011
+<ul>
+<li><em>Royal Geographical Society</em> Exploring the Geography of Geographers. (PI) <strong>£1,500 </strong></li>
+<li><em>University of Liverpool</em> Alternate crime mapping visualisations with National Police Improvement Agency (PI) <strong>£5,000 </strong></li>
+<li><em>University of Liverpool</em> Integration of school commuting data with vehicle emissions. (PI) <strong>£2,000 </strong></li>
+<li><em>ESPON</em> Test the practical use of existing methods and tools for Territorial Impact Assessment in European region. (Co-I) <strong>£308,123 </strong></li>
+</ul></li>
+<li>2010
+<ul>
+<li><em>AHRC</em> Preparing a baseline from which to measure the Big Society. (Co-I) <strong>£30,039 </strong></li>
+</ul></li>
+<li>2009
+<ul>
+<li><em>ESRC</em> Knowledge Transfer Partnership with the Local Futures Group Ltd to develop state of the art web mapping and community interaction technology. (Co-I) <strong>£147,431 </strong></li>
+</ul></li>
+<li>2008
+<ul>
+<li><em>ESRC</em> Spatial Interaction Modelling, Geodemographics and Widening Participation in the Higher Education Sector. (PI) <strong>£94,157 </strong></li>
+</ul></li>
+</ul>
+</div>
+<div id="books" class="section level1">
+<h1>Books</h1>
+<p>Brunsdon, C. and A. Singleton (2014). <em>Geocomputation, A Practical Primer</em>. London: Sage.</p>
+<p>Singleton, A. D. (2010). <em>Educational Opportunity: the Geography of Access to Higher Education</em>. Farham: Ashgate. ISBN: 9780754678670.</p>
+<p>Singleton, A, D. Unwin and K. Kemp (2010). <em>Instructor Manual: Geographic Information Systems and Science (3rd Edition)</em>. Chichester: Wiley.</p>
+</div>
+<div id="refereed-academic-journals" class="section level1">
+<h1>Refereed Academic Journals</h1>
+<div id="section" class="section level2">
+<h2>2016</h2>
+<p>Dolgea, L, M. Pavlis and A. Singleton (2016). “Estimating attractiveness, hierarchy and catchment area extents for a national set of retail centre agglomerations”. In: <em>Journal of Retailing and Consumer Services</em> 28, pp. 78-90. URL: <a href="http://dx.doi.org/10.1016/j.jretconser.2015.08.013" class="uri">http://dx.doi.org/10.1016/j.jretconser.2015.08.013</a>.</p>
+<p>Gale, C, A. Singleton and P. Longley (2016). “Creating the 2011 area classification for output areas (2011 OAC)”. In: <em>Journal of Spatial Information Science</em>, pp. 1-27. DOI: <a href="http://dx.doi.org/http://dx.doi.org/10.5311/JOSIS.2016.12.232">http://dx.doi.org/10.5311/JOSIS.2016.12.232</a>.</p>
+<p>Singleton, A, L. Dolgea, M. Pavlis and P. Longley (2016). “Measuring the spatial vulnerability of retail centres to online consumption through a framework of e-resilience”. In: <em>Geoforum</em> 69, pp. 5-18. URL: <a href="http://dx.doi.org/10.1016/j.geoforum.2015.11.013" class="uri">http://dx.doi.org/10.1016/j.geoforum.2015.11.013</a>.</p>
+<p>Singleton, A, P. Longley and M. Pavlis (2016). “The stability of geodemographic cluster assignments over an inter-censal period”. In: <em>Journal of Geographical Systems</em> 18.2, p. 97–123. URL: <a href="http://dx.doi.org/10.1007/s10109-016-0226-x" class="uri">http://dx.doi.org/10.1007/s10109-016-0226-x</a>.</p>
+<p>Singleton, A, S. Spielman and C. Brunsdon (2016). “Establishing a Framework for Open Geographic Information Science”. In: <em>International Journal Of Geographical Information Science</em> 30.9, pp. 1507-1521. URL: <a href="http://dx.doi.org/10.1080/13658816.2015.1137579" class="uri">http://dx.doi.org/10.1080/13658816.2015.1137579</a>.</p>
+<p>Thiele, T, D. Pope, A. Singleton and D. Stanistreet (2016). “Role of students’ context in predicting academic performance at a medical school: a retrospective cohort study”. In: <em>BMJ open</em> 6.3, p. e010169. URL: <a href="http://dx.doi.org/10.1136/bmjopen-2015-010169" class="uri">http://dx.doi.org/10.1136/bmjopen-2015-010169</a>.</p>
+</div>
+<div id="section-1" class="section level2">
+<h2>2015</h2>
+<p>Singleton, A. (2015). “Transport Mode Choice and the Commute to Work”. In: <em>Environment and Planning A</em> 47.7, pp. 1401-1403. URL: <a href="http://dx.doi.org/10.1177/0308518X15595752" class="uri">http://dx.doi.org/10.1177/0308518X15595752</a>.</p>
+<p>Singleton, A. and P. Longley (2015). “The internal structure of Greater London: a comparison of national and regional geodemographic models”. In: <em>Geo: Geography and Environment</em> 2.1, pp. 69-87. URL: <a href="http://dx/doi.org/10.1002/geo2.7" class="uri">http://dx/doi.org/10.1002/geo2.7</a>.</p>
+<p>Spielman, S. and A. Singleton (2015). “Studying Neighborhoods Using Uncertain Data from the American Community Survey: A Contextual Approach”. In: <em>Annals of the Association of American Geographers</em> 105.5, pp. 1003-1025. URL: <a href="http://dx.doi.org/10.1080/00045608.2015.1052335" class="uri">http://dx.doi.org/10.1080/00045608.2015.1052335</a>.</p>
+</div>
+<div id="section-2" class="section level2">
+<h2>2014</h2>
+<p>Bearman, N. and A. Singleton (2014). “Modelling the potential impact on <span class="math inline">\(CO_2\)</span> emissions of an increased uptake of active travel for the home to school commute using individual level data”. In: <em>Journal of Transport and Health</em> 1.4, pp. 295-304. URL: <a href="http://dx.doi.org/10.1016/j.jth.2014.09.009" class="uri">http://dx.doi.org/10.1016/j.jth.2014.09.009</a>.</p>
+<p>Harris, R, T. Nicholas, C. Souch, A. Singleton, S. Orford, C. Keylock, C. Jarvis and C. Brunsdon (2014). “Geographers Count: A Report on Quantitative Methods in Geography”. In: <em>Enhancing Learning in the Social Sciences</em> 6.2, pp. 43-58. URL: <a href="http://dx.doi.org/10.11120/elss.2014.00035" class="uri">http://dx.doi.org/10.11120/elss.2014.00035</a>.</p>
+<p>Riddlesden, D. and A. Singleton (2014). “Broadband speed equity: A new digital divide?” In: <em>Applied Geography</em> 52, pp. 25-33. URL: <a href="http://dx.doi.org/10.1016/j.apgeog.2014.04.008" class="uri">http://dx.doi.org/10.1016/j.apgeog.2014.04.008</a>.</p>
+<p>Singleton, A. and C. Brunsdon (2014). “Escaping the Pushpin Paradigm in Geographic Information Science: (Re)presenting National Crime Data”. In: <em>Area</em> 46.3, pp. 294-304. DOI: <a href="http://dx.doi.org/http://dx.doi.org/10.1111/area.12116">http://dx.doi.org/10.1111/area.12116</a>.</p>
+<p>Singleton, A, P. Longley and C. Gale (2014). “The Internal Structure of Greater London: A Comparison of National and Regional Geodemographic Models”. In: <em>Applied Spatial Analysis and Policy</em>. URL: <a href="http://dx.doi.org/10.1002/geo2.7" class="uri">http://dx.doi.org/10.1002/geo2.7</a>.</p>
+<p>Thiele, T, A. Singleton, D. Pope and D. Stainstreet (2014). “Predicting Students’ Academic Performance Based on School and Socio-Demographic Characteristics”. In: <em>Studies in Higher Education</em> In Press. URL: <a href="http://dx.doi.org/10.1080/03075079.2014.974528" class="uri">http://dx.doi.org/10.1080/03075079.2014.974528</a>.</p>
+</div>
+<div id="section-3" class="section level2">
+<h2>2013</h2>
+<p>Adnan, M, A. Singleton and P. Longley (2013). “OACoder: Postcode Coding Tool”. In: <em>Journal of Open Research Software</em> 1.1, p. e5. URL: <a href="http://dx.doi.org/10.5334/511ba2c94d661" class="uri">http://dx.doi.org/10.5334/511ba2c94d661</a>.</p>
+<p>Phillips, R, D. Frost and A. Singleton (2013). “Researching the Riots”. In: <em>The Geographical Journal</em> 179.1, pp. 3-10. URL: <a href="http://dx.doi.org/10.1111/j.1475-4959.2012.00463.x" class="uri">http://dx.doi.org/10.1111/j.1475-4959.2012.00463.x</a>.</p>
+<p>Singleton, A. (2013). “A GIS Approach to Modelling CO2 Emissions Associated with the Pupil-School Commute”. In: <em>International Journal of Geographical Information Science</em> 28.2, pp. 256-273. URL: <a href="http://dx.doi.org/10.1080/13658816.2013.832765" class="uri">http://dx.doi.org/10.1080/13658816.2013.832765</a>.</p>
+<p>Singleton, A. and S. Spielman (2013). “The Past, Present and Future of Geodemographic Research in the United States and United Kingdom”. In: <em>Professional Geographer</em> 66.4, pp. 558-567. URL: <a href="http://dx.doi.org/10.1080/00330124.2013.848764" class="uri">http://dx.doi.org/10.1080/00330124.2013.848764</a>.</p>
+</div>
+<div id="section-4" class="section level2">
+<h2>2012</h2>
+<p>Riddlesden, D, A. Singleton and T. B. Fischer (2012). “A Survey of the use of Geographic Information Systems in English Local Authority Impact Assessments”. In: <em>Journal of Environmental Assessment Policy and Management</em> 14.01, p. 1250006. URL: <a href="http://dx.doi.org/10.1142/S1464333212500068" class="uri">http://dx.doi.org/10.1142/S1464333212500068</a>.</p>
+<p>Singleton, A. (2012). “The Geodemographics of Access and Participation in Geography”. In: <em>The Geographical Journal</em> 178.3, pp. 216-229. URL: <a href="http://dx.doi.org/10.1111/j.1475-4959.2012.00467.x" class="uri">http://dx.doi.org/10.1111/j.1475-4959.2012.00467.x</a>.</p>
+<p>Singleton, A, A. G. Wilson and O. O’Brien (2012). “Geodemographics and Spatial Interaction: an Integrated Model for Higher Education”. In: <em>Journal of Geographical Systems</em> 14.2, pp. 223-241. URL: <a href="http://dx.doi.org/10.1007/s10109-010-0141-5" class="uri">http://dx.doi.org/10.1007/s10109-010-0141-5</a>.</p>
+</div>
+<div id="section-5" class="section level2">
+<h2>2011</h2>
+<p>Brunsdon, C, P. Longley, A. Singleton and D. Ashby (2011). “Predicting Participation in Higher Education: a Comparative Evaluation of the Performance of Geodemographic Classifications”. In: <em>Journal of the Royal Statistical Society: Series A (Statistics in Society)</em> 174.1, pp. 17-30. URL: <a href="http://dx.doi.org/10.1111/j.1467-985X.2010.00641.x" class="uri">http://dx.doi.org/10.1111/j.1467-985X.2010.00641.x</a>.</p>
+<p>Mateos, P, M. de Smith and A. Singleton (2011). “Developments in Quantitative Human Geography, Urban Modelling, and Geographic Information Science”. In: <em>Transactions in GIS</em> 15.3, pp. 249-252. URL: <a href="http://dx.doi.org/10.1111/j.1467-9671.2011.01258.x" class="uri">http://dx.doi.org/10.1111/j.1467-9671.2011.01258.x</a>.</p>
+<p>Singleton, A. and D. J. Lewis (2011). “Including Accident Information in Automatic Bicycle Route Planning for Urban Areas”. In: <em>Urban Studies Research</em> 2011, pp. 1-10. URL: <a href="http://dx.doi.org/10.1155/2011/362817" class="uri">http://dx.doi.org/10.1155/2011/362817</a>.</p>
+<p>Singleton, A, P. Longley, R. Allen and O. O’Brien (2011). “Estimating Secondary School Catchment Areas and the Spatial Equity of Access”. In: <em>Computers, Environment and Urban Systems</em> 35.3, pp. 241-249. URL: <a href="http://dx.doi.org/10.1016/j.compenvurbsys.2010.09.006" class="uri">http://dx.doi.org/10.1016/j.compenvurbsys.2010.09.006</a>.</p>
+</div>
+<div id="section-6" class="section level2">
+<h2>2010</h2>
+<p>Adnan, M, P. Longley, A. Singleton and C. Brunsdon (2010). “Towards Real-Time Geodemographics: Clustering Algorithm Performance for Large Multidimensional Spatial Databases”. In: <em>Transactions in GIS</em> 14.3, pp. 283-297. URL: <a href="dx.doi.org/10.1111/j.1467-9671.2010.01197.x" class="uri">dx.doi.org/10.1111/j.1467-9671.2010.01197.x</a>.</p>
+<p>Cheshire, J. A, P. A. Longley and A. Singleton (2010). “The Surname Regions of Great Britain”. In: <em>Journal of Maps</em> 6.1, pp. 401-409. URL: <a href="http://dx.doi.org/10.4113/jom.2010.1103" class="uri">http://dx.doi.org/10.4113/jom.2010.1103</a>.</p>
+<p>Harris, R, A. Singleton, D. Grose, C. Brunsdon and P. Longley (2010). “Grid-enabling Geographically Weighted Regression: A Case Study of Participation in Higher Education in England”. In: <em>Transactions in GIS</em> 14.1, pp. 43-61. URL: <a href="http://dx.doi.org/10.1111/j.1467-9671.2009.01181.x" class="uri">http://dx.doi.org/10.1111/j.1467-9671.2009.01181.x</a>.</p>
+<p>Longley, P. A, A. Singleton, K. Yano and T. Nakaya (2010). “Lost in Translation: Cross-Cultural Experiences in Teaching Geo-Genealogy”. In: <em>Journal of Geography in Higher Education</em> 34.1, pp. 21-38. URL: <a href="http://dx.doi.org/10.1080/03098260902982476" class="uri">http://dx.doi.org/10.1080/03098260902982476</a>.</p>
+<p>Singleton, A. (2010). “The Geodemographics of Educational Progression and their Implications for Widening Participation in Higher Education”. In: <em>Environment and Planning A</em> 42.11, pp. 2560-2580. URL: <a href="http://dx.doi.org/10.1068/a42394" class="uri">http://dx.doi.org/10.1068/a42394</a>.</p>
+</div>
+<div id="section-7" class="section level2">
+<h2>2009</h2>
+<p>Longley, P. and A. Singleton (2009a). “Classification Through Consultation: Public Views Of The Geography Of The E-Society.” In: <em>International Journal of Geographical Information Science</em> 23.6, pp. 737-763. URL: <a href="http://dx.doi.org/10.1080/13658810701704652" class="uri">http://dx.doi.org/10.1080/13658810701704652</a>.</p>
+<p>Longley, P. and A. Singleton (2009b). “Linking Social Deprivation and Digital Exclusion in England”. In: <em>Urban Studies</em> 46.7, pp. 1275-1298. URL: <a href="htp://dx.doi.org/10.1177/0042098009104566" class="uri">htp://dx.doi.org/10.1177/0042098009104566</a>.</p>
+<p>Mateos, P, A. Singleton and P. Longley (2009). “Uncertainty in the Analysis of Ethnicity Classifications: Issues of Extent and Aggregation of Ethnic Groups”. In: <em>Journal of Ethnic and Migration Studies</em> 35.9, pp. 1437-1460. URL: <a href="http://dx.doi.org/10.1080/13691830903125919" class="uri">http://dx.doi.org/10.1080/13691830903125919</a>.</p>
+<p>Singleton, A. (2009). “Data Mining Course Choice Sets and Behaviours for Target Marketing of Higher Education”. In: <em>Journal of Targeting, Measurement and Analysis for Marketing</em> 17.3, pp. 157-170. URL: <a href="http://dx.doi.org/10.1057/jt.2009.13" class="uri">http://dx.doi.org/10.1057/jt.2009.13</a>.</p>
+<p>Singleton, A. and P. Longley (2009a). “Creating Open Source Geodemographics - Refining a National Classification of Census Output Areas for Applications in Higher Education”. In: <em>Papers in Regional Science</em> 88.3, pp. 643-666. DOI: <a href="http://dx.doi.org/http://dx.doi.org/10.1111/j.1435-5957.2008.00197.x">http://dx.doi.org/10.1111/j.1435-5957.2008.00197.x</a>.</p>
+<p>Singleton, A. and P. A. Longley (2009b). “Geodemographics, Visualisation, and Social Networks in Applied Geography”. In: <em>Applied Geography</em> 29.3, pp. 289-298. DOI: <a href="http://dx.doi.org/http://dx.doi.org/10.1016/j.apgeog.2008.10.006">http://dx.doi.org/10.1016/j.apgeog.2008.10.006</a>.</p>
+</div>
+<div id="section-8" class="section level2">
+<h2>2008</h2>
+<p>Gibin, M, A. Singleton, R. Milton, P. Mateos and P. Longley (2008). “An Exploratory Cartographic Visualisation of London through the Google Maps API”. In: <em>Applied Spatial Analysis and Policy</em> 1.2, pp. 85-97. URL: <a href="http://dx.doi.org/10.1007/s12061-008-9005-5" class="uri">http://dx.doi.org/10.1007/s12061-008-9005-5</a>.</p>
+<p>Haklay, M, A. Singleton and C. Parker (2008). “Web Mapping 2.0: The Neogeography of the GeoWeb”. In: <em>Geography Compass</em> 2.6, pp. 2011-2039. URL: <a href="http://dx.doi.org/10.1111/j.1749-8198.2008.00167.x" class="uri">http://dx.doi.org/10.1111/j.1749-8198.2008.00167.x</a>.</p>
+</div>
+</div>
+<div id="book-chapters" class="section level1">
+<h1>Book Chapters</h1>
+<p>Singleton, A. (2016). “Cities and Context: The Codification of Small Areas through Geodemographic Classification”. In: <em>Code and the City</em>. Ed. by R. Kichin and S. Perng. Routledge.</p>
+<p>Adnan, M, A. Singleton, P. Longley and I. Turton (2014). “Parallel Processing Architectures of GPU: Applications in Geocomputational Geodemographics”. In: <em>Geocomputation</em>. Ed. by R. J. Abrahart and L. M. See. Second. London: Taylor &amp; Francis.</p>
+<p>Alexandros, A. and A. Singleton (2014). “Geodemographic Analysis”. In: <em>Geocomputation: A Practical Primer</em>. Ed. by C. Brunsdon and A. Singleton. London: Sage.</p>
+<p>Brunsdon, C. and A. Singleton (2014a). “Reproducible Research: Concepts, Techniques and Issues”. In: <em>Geocomputation: A Practical Primer</em>. Ed. by C. Brunsdon and A. Singleton. London: Sage.</p>
+<p>Brunsdon, C. and A. Singleton (2014b). “The Future of Geocomputation”. In: <em>Geocomputation: A Practical Primer</em>. Ed. by C. Brunsdon and A. Singleton. London: Sage.</p>
+<p>Singleton, A. (2010a). “Neogeography”. In: <em>Encyclopaedia of Geography</em>. Ed. by B. Wharf. London: Sage.</p>
+<p>Singleton, A. (2010b). “Virtual Geodemographics: Consumer Insight in Online and Offline Spaces”. In: <em>Handbook of Research on Methods and Techniques for Studying Virtual Communities: Paradigms and Phenomena</em>. Ed. by B. K. Daniel. Hershey, USA: IGI Global.</p>
+</div>
+<div id="professional-magazines" class="section level1">
+<h1>Professional Magazines</h1>
+<p>Singleton, A. (2014). “Learning to Code”. In: <em>Geographical Magazine</em>, p. 77.</p>
+<p>Singleton, A. (2010). “Neogeography: Engaging People for Common Good”. In: <em>GIS Development</em>, pp. 26-29.</p>
+<p>Singleton, A. and A. Hudson-Smith (2008). “Digital Geography in a Web 2.0 World”. In: <em>GIS Professional</em> 21, pp. 20-21.</p>
+</div>
+<div id="participation-in-conferences-and-professional-meetings" class="section level1">
+<h1>Participation in Conferences and Professional Meetings</h1>
+<div id="conferences" class="section level2">
+<h2>Conferences</h2>
+<p>Singleton, A. and P. Longley (2015). <em>The Internal Structure of Greater London</em>. Association of American Geographers Conference, Chicago.</p>
+<p>Singleton, A, S. Spielman and D. O’Sulivan (2015). <em>Our Town: How Socioeconomics Shape Functional Neighborhoods in American Cities</em>. Geocomputation, University of Texas - Dallas, US.</p>
+<p>Alexandros, A. and A. Singleton (2014). <em>Comparing the internal socio-economic structure of regions - spatial disparities and geodemographic form</em>. Regional Studies Association Winter Conference, London.</p>
+<p>Alexos, A. and A. Singleton (2014). <em>Establishing Dynamic Measures of Built Environment Characteristics and their Relationship to Patterns of Socio-Spatial Structure</em>. Association of American Geographers Conference, Tampa.</p>
+<p>Bearman, N. and A. Singleton (2014). <em>Modelling Home to School Travel for State Pupils in England, 2008-2011</em>. GIS Research UK, Glasgow.</p>
+<p>Dolgea, L. and A. Singleton (2014a). <em>e-Resilience of UK town centres</em>. Regional Studies Association European Conference, Izmir, Turkey.</p>
+<p>Dolgea, L. and A. Singleton (2014b). <em>E-resilience of UK town centres</em>. Regional Studies Association Winter Conference, London.</p>
+<p>Pavlis, M. and A. Singleton (2014). <em>Updating OAC - Assessing Classification Uncertainty and Cluster Stability During Intercensal Periods</em>. Association of American Geographers Conference, Tampa.</p>
+<p>Riddlesden, D. and A. Singleton (2014). <em>Identifying Regional Digital Cultures - A National classification of Internet Use and Engagement</em>. Regional Studies Association Winter Conference, London.</p>
+<p>Singleton, A. (2014). <em>Transformative Research in Geographic Information Science</em>. Association of American Geographers Conference, Tampa.</p>
+<p>Riddlesden, D. and A. Singleton (2013). <em>Exploring the Geography of Access to Fixed Line Broadband Services in England through Crowd Sourced Speed Check Data</em>. Association of American Geographers Conference, Los Angeles.</p>
+<p>Satani, T, K. Yano, T. Nakaya, A. Singleton and C. Brunsdon (2013). <em>Construction and Dissemination of the Open Atlas of the 2010 Population Census of Japan</em>. Japanese GIS Association Conference, Tokyo.</p>
+<p>Singleton, A. (2013). <em>CO2 Emissions and the School Commute.</em> GIS Research UK, Liverpool.</p>
+<p>Singleton, A. (2012). <em>Geography, a Thriving or Declining Discipline?</em> Association of American Geographers Conference, New York.</p>
+<p>Adnan, M. and A. Singleton (2011). <em>Building Geodemographics on Parallel Graphics Processing Unit Architecture</em>. Geocomputation, London.</p>
+<p>Adnan, M, A. Singleton and P. Longley (2011). <em>The Specification, Estimation, and Testing of Real-time Geodemographics using Parallel Graphics</em>. GIS Research UK, Portsmouth.</p>
+<p>Adnan, M. and A. Singleton (2010). <em>Parallel K-Means Clustering using Graphical Processing Units for the Geocomputation of Real-time Geodemographics</em>. GIS Research UK, London.</p>
+<p>O’Brien, O. and A. Singleton (2010). <em>Spatial Interaction Modelling and Geodemographics for Higher Education</em>. Advances in Spatial Analysis and e-Social Science, London: University College London.</p>
+<p>Adnan, M, A. Singleton, C. Brunsdon and P. Longley (2009). <em>Moving to Real Time Segmentation: Efficient Computation of Geodemographic Classification</em>. GIS Research UK, Durham.</p>
+<p>O’Brien, O. and A. Singleton (2009). <em>Lightning Talk: OSM Data as a Context Layer for Choropleth Maps</em>. State of the Map, Amsterdam.</p>
+<p>Singleton, A. (2009a). <em>Geographic Data Mining of Online Social Networks</em>. GIS Research UK, Durham.</p>
+<p>Singleton, A. (2009b). <em>Geographic Visualisation: Neogeography and Area Classification</em>. OACUG Geodemographic Visualisation Conference, London.</p>
+<p>Singleton, A. (2009c). <em>Public Engagement: The London Profiler, Public Profiler and the E-Society Classification.</em> S4 Conference, London.</p>
+<p>Singleton, A. and P. Longley (2009a). <em>Some Developments in the Specification, Estimation and Testing of Geodemographic Models</em>. S4 Conference, London.</p>
+<p>Singleton, A. and P. Longley (2009b). <em>Virtual Geodemographics</em>. Association of American Geographers Conference, Las Vegas.</p>
+<p>Gibin, M, P. Mateos, A. Singleton, P. Longley and P. Atkinson (2008). <em>Monitoring Fine Scale Ethnic Changes in General Practices Catchment Areas within Inner London</em>. Association of American Geographers Conference, Boston.</p>
+<p>Singleton, A. and P. Longley (2007). <em>Modifying the 2001 Census Output Area Classification for Applications in Higher Education</em>. GIS Reserach UK, Maynooth.</p>
+<p>Lloyd, D, A. Singleton and P. Longley (2006). <em>Towards a World Wide Genealogical Website: People, Places and Geographical Genealogy.</em> Royal Geographical Society Annual Conference, London.</p>
+<p>Longley, P. and A. Singleton (2006). <em>Circling the Drain</em>. Royal Geographical Society Annual Conference, London.</p>
+<p>Singleton, A. (2006a). <em>Bespoke Versus General Purpose Discrete Classifications: Segmentation of Higher Education Market Data</em>. GIS Research UK, Nottingham.</p>
+<p>Singleton, A. (2006b). <em>Geodemographic Segmentation of Higher Education Market Data</em>. Regional Science Annual Conference, Jersey.</p>
+<p>Singleton, A. (2006c). <em>Higher Education Segmentation</em>. Royal Geographical Society Annual Conference, London.</p>
+<p>Singleton, A. (2005a). <em>The Social Space of UK Higher Education Acceptances</em>. Royal Geographical Society Conference, London.</p>
+<p>Singleton, A. (2005b). <em>Widening Access and Participation in Higher Education</em>. GIS Research UK, Glasgow.</p>
+<p>Farr, M, P. Longley and A. Singleton (2004). <em>Widening Access and Participation in Higher Education</em>. GIS Research UK, Norwich.</p>
+</div>
+<div id="invited-presentations-at-research-and-professional-seminars-conferences-and-workshops" class="section level2">
+<h2>Invited Presentations at Research and Professional Seminars, Conferences and Workshops</h2>
+</div>
+<div id="section-9" class="section level2">
+<h2>2016</h2>
+<p><em>Consumer Data Research and Census Enumeration.</em> Offiice for National Statistics, Southampton.</p>
+<p><em>E-Resilience and Retail.</em> Said Business School, University of Oxford, Oxford.</p>
+<p><em>Education Panel.</em> ESRI UK Conference, London.</p>
+<p><em>Geographic Data Science New Forms of Data and Policing.</em> Crime, Policing and Citizenship Closing Event, London.</p>
+<p><em>Keynote: Geography and Access.</em> Brilliant Club, Stoce on Trent.</p>
+<p><em>Keynote: Teaching to the Converted: From GIS to Geographic Data Science.</em> OSGIS 2016, Ostrava, Czech Republic.</p>
+<p><em>Turning Big Data Into Information.</em> University of Cambridge / Princes Teaching Trust, Cambridge.</p>
+</div>
+<div id="section-10" class="section level2">
+<h2>2015</h2>
+<p><em>Geographic Data Science and School Markets.</em> Oxford-Man institute, University of Oxford, Oxford.</p>
+<p><em>Geodemographics in an Academic Context.</em> University of Liverpool, Liverpool.</p>
+<p><em>Developments in Spatial Data Visualisation.</em> Said Business School, University of Oxford, Oxford.</p>
+<p><em>Reproducible Research: Open Methods and Data.</em> Regional Studies Association, Sheffield.</p>
+</div>
+<div id="section-11" class="section level2">
+<h2>2014</h2>
+<p><em>What is so Big about Big Data? Some Observations on Open Data and Systems.</em> National University of Maynooth, Ireland.</p>
+<p><em>Cities and Context: The Codification of Small Areas through Geodemographic Classification.</em> Code and the City Conference, Ireland.</p>
+<p><em>The Geodemographics of Use and Engagement with the Internet.</em> Market Research Society, London.</p>
+<p><em>Changed Face of GIS – Curriculum Challenges and Reproducible Methods.</em> Irish Organisation for Geographic Information, Ireland.</p>
+<p><em>Advances in the Geodemographic Study of Population and Place.</em> University of Oxford, Oxford Institute of Ageing.</p>
+<p><em>The Past Present and Future of Spatial Analytics with Big Data.</em> Department of Geography, University of Leeds, Leeds.</p>
+<p><em>Geodemographics and the Internal Structure of Cities.</em> Cardiff University, Cardiff.</p>
+</div>
+<div id="section-12" class="section level2">
+<h2>2013</h2>
+<p><em>Advances in Geographic Information Science and the Population of Blackpool.</em> Blackpool Geographical Association, Blackpool.</p>
+<p><em>Geodemographics and Higher Education.</em> Kings College London, London.</p>
+</div>
+<div id="section-13" class="section level2">
+<h2>2012</h2>
+<p><em>Advances in Geographic Visualisation.</em> University of Oxford, Oxford.</p>
+</div>
+<div id="section-14" class="section level2">
+<h2>2011</h2>
+<p><em>Advances in Geographic Visualisation.</em> University of Oxford, Oxford.</p>
+<p><em>Spatial Analysis using the National Pupil Database.</em> PLASC/PLUG User Conference, London.</p>
+</div>
+<div id="section-15" class="section level2">
+<h2>2010</h2>
+<p><em>Advances in Geographic Visualisation.</em> University of Oxford, Oxford.</p>
+<p><em>Thought Provoking Applications of OAC: Widening Participation in Higher Education..</em> LARIA: Output Area Classification: Current and Potential Uses, Birmingham.</p>
+</div>
+<div id="section-16" class="section level2">
+<h2>2009</h2>
+<p><em>Geodemographic Visualisation.</em> Society for Location Analysis, London.</p>
+<p><em>Geographic Visualisation: Neogeography and Area Classification.</em> OACUG Geodemographic Visualisation Conference, London.</p>
+<p><em>Introduction to the Output Area Classification Online.</em> ESRC Research Methods Workshop: Measuring Segregation: Methods, Tools and Data, Bristol.</p>
+<p><em>Public Engagement: The London Profiler, Public Profiler and the E-Society Classification..</em> S4 Conference, London.</p>
+<p><em>Putting Social Care Commissioning at the Heart of Personalisation.</em> Local Government Information Unit, London.</p>
+</div>
+<div id="section-17" class="section level2">
+<h2>2008</h2>
+<p><em>Communicating Geodemographics.</em> Market Research Society, London.</p>
+<p><em>Research Frontiers: Neogeography and GIS applications for Spatial Decision Making.</em> University of Nottingham, Nottingham.</p>
+<p><em>What are Geographic Information Systems for the Google generation?.</em> 3rd ESRC Research Methods Festival, Oxford.</p>
+</div>
+<div id="section-18" class="section level2">
+<h2>2007</h2>
+<p><em>The Geography of Classification: Geodemographic Analysis and Mapping.</em> Teacher Schools Network Master Class, Norwich.</p>
+<p><em>A Meritocratic Market? Tailoring Geodemographics for use in Higher Education Widening Participation.</em> University of Bristol, Bristol.</p>
+<p><em>Open Source Geodemographics: Applications for Education.</em> University of Sheffield, Sheffield.</p>
+<p><em>Turning Data into Information: Geodemographic Applications.</em> Ritsumeikan University, Kyoto, Japan.</p>
+</div>
+<div id="section-19" class="section level2">
+<h2>2006</h2>
+<p><em>Demonstration of Institutional and Subject Geodemographic Profiling.</em> University College London, London.</p>
+</div>
+<div id="section-20" class="section level2">
+<h2>2005</h2>
+<p><em>Marketing a New Market?.</em> UCAS Admission Officers Conference, Keele.</p>
+</div>
+<div id="section-21" class="section level2">
+<h2>2004</h2>
+<p><em>Geodemographics for Education.</em> UCAS Admission Officers Conference, Reading.</p>
+<p><em>Tailored Geodemographics - The Construction of an Educational Mosaic.</em> LSDA Research Conference, London.</p>
+</div>
+</div>
+<div id="professional-and-administrative-activities" class="section level1">
+<h1>Professional and Administrative Activities</h1>
+<ul>
+<li>Europe, Middle East and Africa Editor - Transactions in GIS (2015- ).</li>
+<li>Editor in Chief - Regional Studies and Regional Science (First Open Access journal from Taylor and Francis) (2013- )</li>
+<li>Book Reviews Editor - Environment and Planning B (2012 - 15).</li>
+</ul>
+</div>
+<div id="administrative-experience" class="section level1">
+<h1>Administrative Experience</h1>
+<ul>
+<li>Course director - MSc Applied Geographical Information Science (2014-16).</li>
+<li>Management of Department of Geography and Planning website (2012-13).</li>
+<li>REF internal reviewer (2012-13).</li>
+<li>Undergraduate admissions (strategic) (2012-13).</li>
+<li>Year tutor (2011-12).</li>
+<li>REF internal reviewer (2011-12).</li>
+<li>Staff student liaison committee (2010-11).</li>
+</ul>
+</div>
+<div id="external-examination-experience" class="section level1">
+<h1>External Examination Experience</h1>
+<ul>
+<li>University of Warwick: MSc in Big Data and Digital Futures, and MSc in Urban Informatics and Analytics (2015- ).</li>
+<li>University College London: MSc Geospatial Analysis (2016- ).</li>
+</ul>
+</div>
+<div id="organisational-roles-within-professional-societies" class="section level1">
+<h1>Organisational Roles within Professional Societies</h1>
+<ul>
+<li>Chair of the GIScience Research Group at the Royal Geographical Society with the Institute of British Geographers (2014–15).</li>
+<li>Chair of the Output Area Classification User Group at the Royal Statistical Society (2010-14).</li>
+<li>Chair of the Quantitative Methods Research Group at the Royal Geographical Society with the Institute of British Geographers (2008-11).</li>
+</ul>
+</div>
+<div id="membership-of-professional-societies" class="section level1">
+<h1>Membership of Professional Societies</h1>
+<ul>
+<li>Fellow of the Royal Geographical Society (2003 -).</li>
+<li>Member of the Association of American Geographers (2003 -).</li>
+<li>Member of the Regional Studies Association (2010 - ).</li>
+</ul>
+</div>
+<div id="academic-and-professional-duties" class="section level1">
+<h1>Academic and Professional Duties</h1>
+<p>Referee on articles submitted to the following international journals:</p>
+<p>Area; Environment and Planning B (Planning and Design); Computers, Environment and Urban Systems; International Journal of Health Geographics: International Journal of Pattern Recognition; Papers in Regional Science; Applied Spatial Analysis and Policy; Environmental Modelling; International Journal of Geographic Information Science; Educational Research Journal; URISA Journal; Journal of Maps; Journal of Urban Technology; PLOS One.</p>
+</div>
+<div id="conference-and-seminar-organisation" class="section level1">
+<h1>Conference and Seminar Organisation</h1>
+<ul>
+<li>2016
+<ul>
+<li>OSGIS 2016 Programme Committee.</li>
+</ul></li>
+<li>2014
+<ul>
+<li>OSGIS 2014 Programme Committee.</li>
+</ul></li>
+<li>2013
+<ul>
+<li>GIS Research UK Conference Chair (<a href="http://liverpool.gisruk.org" class="uri">http://liverpool.gisruk.org</a>).</li>
+<li>GIS Ostrava 2013 Member of the Scientific Committee, Czech Republic</li>
+</ul></li>
+<li>2012
+<ul>
+<li>OSGIS 2012 Programme Committee.</li>
+<li>Session Organiser: New approaches in quantitative social geography: new data, new meth- ods, new insights. Association of American Geographers Conference, New York.</li>
+</ul></li>
+<li>2010
+<ul>
+<li>Making Efficiency Saving with OAC by Understanding Total Place. Output Area Classification User Conference, London.</li>
+<li>Session Convenor The Spatial Dimensions of Health. Royal Geographical Society Annual International Conference, London.</li>
+</ul></li>
+<li>2009
+<ul>
+<li>Session Convenor New Urban Geography: Evolving Area Classification for Socio-Spatial Generalisation Royal Geographical + + Society Annual International Conference, Manchester, 26-28 August.</li>
+<li>Organising committee for the 2010 GIS Research UK Conference. London, University Col- lege London.</li>
+<li>Conference Organiser - Output Area Classification User Conference.</li>
+</ul></li>
+<li>2006
+<ul>
+<li>Co-Organiser, Spatial Literacy in Teaching: Communicating GIScience, London.</li>
+<li>Co-Organiser, Spatial Literacy, Student Recruitment and Widening Participation, London.</li>
+</ul></li>
+</ul>
+</div>
+<div id="impact-and-knowledge-transfer" class="section level1">
+<h1>Impact and Knowledge Transfer</h1>
+<p>For each research project I have been involved with, a range of academic publications have been produced. In addition to these scholarly outputs, each project is typically accompanied with a website aiming to disseminate the findings more broadly and where possible to engage a wide public audience. These websites take a variety of different formats and are briefly detailed in the following section with evidence for their success measured in terms of press coverage.</p>
+<div id="software" class="section level2">
+<h2>Software</h2>
+<ul>
+<li>gd (<a href="http://rpubs.com/alexsingleton/gd" class="uri">http://rpubs.com/alexsingleton/gd</a>) - An R package for building, testing and visualisation of geodemo- graphic classification.</li>
+<li><p>OAC Coder (<a href="http://www.publicprofiler.org/resources.php" class="uri">http://www.publicprofiler.org/resources.php</a>) - Postcode profiling tool for the ONS Output Area Classification (downloaded over 700 times). ## Websites I have developed and/or manage a range successful websites created as part of activities associated with research grants. These websites have wide ranging purposes, including pedagogic resource dissemination, public participation in GIS or impact generation. Many of these sites have captured a wide and international audience. For example, the worldnames (worldnames.publicprofler.org) website has recieved over 2 million unique users from 200 countries since August 30 2008.</p></li>
+<li>www.policestreets.co.uk - a new visualisation of crime data.</li>
+<li>rpubs.com/alexsingleton/ - R tutorials.</li>
+<li>www.educationprofiler.org - School and catchment profiles with Google Maps.</li>
+<li>gbnames.publicprofiler.org - 1881 and 1998 GB surname mapping website.</li>
+<li>worldnames.publicprofler.org - world surname mapping website.</li>
+<li>esociety.publicprofler.org - e-Society profiler website (search by postcode).</li>
+<li>www.onomap.org - name classification website.</li>
+<li>www.publicprofiler.org - neighbourhood profiler website (search by postcode).</li>
+<li>www.areaclassification.org.uk - geodemographic news and teaching materials.</li>
+<li><p>www.alex-singleton.com - personal research blog.</p></li>
+</ul>
+</div>
+</div>
+<div id="media-exposure" class="section level1">
+<h1>Media Exposure</h1>
+<p>My own research and/or the projects that I have worked on or managed have gained attention through the following media features:</p>
+<ul>
+<li>2013
+<ul>
+<li>Mapping the Census: How One Man Produced a Library for All. Guardian: (<a href="http://goo.gl/HnazXF" class="uri">http://goo.gl/HnazXF</a>).</li>
+</ul></li>
+<li>2011
+<ul>
+<li>The Geography of Poverty. Socialist Review: (<a href="http://goo.gl/NoQjx7" class="uri">http://goo.gl/NoQjx7</a>).</li>
+<li>10/02 - UK Crime Map Commentary. BBC Radio Berkshire.</li>
+<li>01/05 - The End of the Census? Geographical Magazine.</li>
+<li>27/9 - Why do people riot? Current Biology: (<a href="http://goo.gl/Uto0nA" class="uri">http://goo.gl/Uto0nA</a>).</li>
+<li>16/8 - England Riots: Was Poverty a Factor. Guardian: (<a href="http://goo.gl/lPx7u8" class="uri">http://goo.gl/lPx7u8</a>).</li>
+<li>18/8 - England Rioters: Young Poor and Unemployed: (<a href="http://goo.gl/2NHloc" class="uri">http://goo.gl/2NHloc</a>).</li>
+<li>11/11 - TUC Briefing: Responding to the Riots.</li>
+</ul></li>
+<li>2008
+<ul>
+<li>10/04 - Nestoria Interview - Alex Singleton - UCLs Centre for Advanced Spatial Analysis. Nestoria Weblog: (<a href="http://goo.gl/BZ1ugq" class="uri">http://goo.gl/BZ1ugq</a>).</li>
+<li>01/11 - A Multicultural Atlas of London. ESRC Britain in 2009 Magazine, p 100.</li>
+<li>01/11 - Using Geodemographics in Public Service Delivery. ESRC Britain in 2009 Magazine, pp 28.</li>
+<li>01/11 - Tracing Family Histories goes Global. ESRC Britain in 2009 Magazine, pp 111.</li>
+<li>30/08 - Website Maps Surnames Worldwide. BBC News Online: (<a href="http://goo.gl/dIKw0q" class="uri">http://goo.gl/dIKw0q</a>).</li>
+<li>30/08 - Putting you on the Map: the Website that Pinpoints where your Name is in the World. The Independent.</li>
+<li>30/08 - Global Surname Website Launched. Channel 4 News.</li>
+<li>30/08 - What’s in a Name? A Great Deal, Say Researchers. The Telegraph: (<a href="http://goo.gl/r37HMn" class="uri">http://goo.gl/r37HMn</a>).</li>
+<li>30/08 - Website Pinpoints Where in the World Your Name is. New Zealand Herald: (<a href="http://goo.gl/MpxZOm" class="uri">http://goo.gl/MpxZOm</a>)</li>
+</ul></li>
+<li>2006
+<ul>
+<li>10/04 - 08/08 - Britain’s Digital Tribes Revealed. BBC News Online: (<a href="http://goo.gl/SDlnAv" class="uri">http://goo.gl/SDlnAv</a>).</li>
+<li>15/01 - Mr Smith? From Lerwick, I presume, The Observer: (<a href="http://goo.gl/urZbPV" class="uri">http://goo.gl/urZbPV</a>) 16/01 - Whats in a Surname? Channel 4.</li>
+<li>21/01 - My, You’ve Come a Long Way Without Even Leaving Home. The Times</li>
+<li>21/01 - The Internet Route to the Roots of Your Surname. The Daily Mail. 25/01 - Miles Mendoza Website of the Day. Radio 2 (<a href="http://goo.gl/r3YRgA" class="uri">http://goo.gl/r3YRgA</a>).</li>
+<li>04/06 - Name check reveals a new pecking order. The Sunday Times.</li>
+<li>05/06 - How a Cadbury Outranks a Blair or a Beckham. The Daily Mail.</li>
+<li>09/06 - Have I Got News For You. BBC Two.</li>
+<li>31/08 - End of the Innuendo. The Guardian (<a href="http://goo.gl/Mt5rnk" class="uri">http://goo.gl/Mt5rnk</a>).</li>
+<li>31/08 - How British names conquered the world. The Telegraph (<a href="http://goo.gl/BKAs97" class="uri">http://goo.gl/BKAs97</a>).</li>
+</ul></li>
+</ul>
+</div>
+<div id="other-education-and-qualifications" class="section level1">
+<h1>Other Education and Qualifications</h1>
+<ul>
+<li>NVQ Level 4 in Management (part time) (2003-05).</li>
+<li>NVQ Level 3 in Supervisory Management (part time) (1998-99).</li>
+<li>A Levels in Biology (B), Business (B), Geography (A) (1996-98)</li>
+</ul>
+</div>
+<div id="other-work-experience" class="section level1">
+<h1>Other Work Experience</h1>
+<ul>
+<li>Researcher - Open University: Knowledge Media Institute (Summer Work) (2003).</li>
+<li>Web Designer - BDH TBWA New Media Department (Summer Work) (2002).</li>
+<li>Marketing and Information Technology Assistant - Cascade Consulting (Summer Work) (2002).</li>
+<li>Researcher - Open University: Centre for * New Media (Summer Work) (2001).</li>
+<li>Researcher - Open University: Knowledge Media Institute (Summer Work) (2000).</li>
+<li>Web Developer and Webmaster - Denbigh School (Gap Year) (1999).</li>
+<li>Recruitment Assistant - Alenia Marconi (Gap Year- Year in Industry Scheme) (1998).</li>
+</ul>
+</div>
+
+<hr>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6248530-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
