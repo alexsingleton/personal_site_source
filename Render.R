@@ -1,5 +1,6 @@
 devtools::install_github('rstudio/rmarkdown')
 library(rmarkdown)
+
 setwd("~/Dropbox/Projects/Personal_Website")
 
 #Render the site
