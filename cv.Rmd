@@ -1,7 +1,7 @@
 ---
 title: "Alex Singleton"
 params:
-   address: University of Liverpool, Department of Geography and Planning, Gordon Stephenson Building,Liverpool, L69 7ZQ
+   address: University of Liverpool, Department of Geography and Planning, Roxby Building, Liverpool, L69 7ZT
    email: alex.singleton@liverpool.ac.uk
    telephone: "+44 (0)151 7943108"
    website: www.alex-singleton.com
@@ -74,7 +74,7 @@ library(RefManageR)
 
 # Research Interests
 
-Within a framework of Geographic Information Science, my research has extended a tradition of area classification in Geography. I have developed an empirically informed critique of the ways in which geodemographic methods can be refined for effective yet ethical use in public resource allocation applications. This research has developed from substantive interests in the investigation of the social, spatial and temporal dimensions of access inequalities in Higher Education. In addition to this core research agenda, I have also explored issues of digital exclusion, aspects of retail, school commuting behaviour, as well as the ways in which new mapping tools and techniques can be utilised in activities related to the public understanding of science. I am an advocate of open source data and software, and the majority of my research (and research led teaching) involve the use of open geocomputation with large administrative or crowd sourced datasets.
+My research has extended a tradition of area classification within Geography where I have developed an empirically informed critique of the ways in which geodemographic methods can be refined for effective yet ethical use in public resource allocation applications. This research has developed from substantive interests around the social, spatial and temporal dimensions of access inequalities in Higher Education, digital exclusion, aspects of retail and school commuting behaviours. My most recent work has focused on understanding how both fast and slow human dynamics  can be understood within urban systems and their hierarchies, developing new methods of mapping these geographies at fine spatio-temproal scale. More generally I am interested in how geographic data science can be utilised in activities related to the public understanding of science, and I am also an advocate of open source data, software and publishing.
 
 *************
 
@@ -266,13 +266,13 @@ Area; Environment and Planning B (Planning and Design); Computers, Environment a
     + GIS Ostrava 2013 Member of the Scientific Committee, Czech Republic
 * 2012
     + OSGIS 2012 Programme Committee.
-    + Session Organiser: New approaches in quantitative social geography: new data, new meth- ods, new insights. Association of American Geographers Conference, New York.
+    + Session Organiser: New approaches in quantitative social geography: new data, new methods, new insights. Association of American Geographers Conference, New York.
 * 2010
     + Making Efficiency Saving with OAC by Understanding Total Place. Output Area Classification User Conference, London.
     + Session Convenor The Spatial Dimensions of Health. Royal Geographical Society Annual International Conference, London.
 * 2009
-    + Session Convenor New Urban Geography: Evolving Area Classification for Socio-Spatial Generalisation Royal Geographical     +     + Society Annual International Conference, Manchester, 26-28 August.
-    + Organising committee for the 2010 GIS Research UK Conference. London, University Col- lege London.
+    + Session Convenor New Urban Geography: Evolving Area Classification for Socio-Spatial Generalisation. Royal Geographical Society Annual International Conference, Manchester, 26-28 August.
+    + Organising committee for the 2010 GIS Research UK Conference. London, University College London.
     + Conference Organiser - Output Area Classification User Conference.
 * 2006
     + Co-Organiser, Spatial Literacy in Teaching: Communicating GIScience, London.
@@ -282,10 +282,10 @@ Area; Environment and Planning B (Planning and Design); Computers, Environment a
 For each research project I have been involved with, a range of academic publications have been produced. In addition to these scholarly outputs, each project is typically accompanied with a website aiming to disseminate the findings more broadly and where possible to engage a wide public audience. These websites take a variety of different formats and are briefly detailed in the following section with evidence for their success measured in terms of press coverage.
 
 ## Software
-* gd (http://rpubs.com/alexsingleton/gd) - An R package for building, testing and visualisation of geodemo- graphic classification.
+* gd (http://rpubs.com/alexsingleton/gd) - An R package for building, testing and visualisation of geodemographic classification.
 * OAC Coder (http://www.publicprofiler.org/resources.php) - Postcode profiling tool for the ONS Output Area Classification (downloaded over 700 times).
 ## Websites
-I have developed and/or manage a range successful websites created as part of activities associated with research grants. These websites have wide ranging purposes, including pedagogic resource dissemination, public participation in GIS or impact generation. Many of these sites have captured a wide and international audience. For example, the worldnames (worldnames.publicprofler.org) website has recieved over 2 million unique users from 200 countries since August 30 2008.
+I have developed and/or manage a range successful websites created as part of activities associated with research grants. These websites have wide ranging purposes, including pedagogic resource dissemination, public participation in GIS or impact generation. Many of these sites have captured a wide and international audience. For example, the worldnames (worldnames.publicprofler.org) website has received over 2 million unique users from 200 countries since August 30 2008.
 
 * www.policestreets.co.uk - a new visualisation of crime data.
 * rpubs.com/alexsingleton/ - R tutorials.
