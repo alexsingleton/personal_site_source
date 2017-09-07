@@ -239,11 +239,15 @@ for (date in dates) {
 * University of Warwick: MSc in Big Data and Digital Futures, and MSc in Urban Informatics and Analytics (2015- ).
 * University College London: MSc Geospatial Analysis (2016- ).
 
+# External Review / Panel Experience
+* University of Leeds: MOT Project (EPSRC), Advisory Panel (2015-16).
+* Expert review board -  UKCRIC (UK Collaboratorium for Research on Infrastructure and Cities) Data and Analytics Facility for National Infrastructure (DAFNI) (2017 -).
+* JISC - Geospatial Platform Evaluation (2017).
+
 # Organisational Roles within Professional Societies
 * Chair of the GIScience Research Group at the Royal Geographical Society with the Institute of British Geographers (2014–15).
 * Chair of the Output Area Classification User Group at the Royal Statistical Society (2010-14).
 * Chair of the Quantitative Methods Research Group at the Royal Geographical Society with the Institute of British Geographers (2008-11).
-
 
 # Membership of Professional Societies
 * Fellow of the Royal Geographical Society (2003 -).
