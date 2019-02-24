@@ -45,7 +45,7 @@ title: ""
 
         <div class="col-md-4">
         <h2>Urban Analytics</h2>
-        <p><img src="./images/urban_analytics.jpg" alt="GDSL" class="pull-left gap-right"></p>
+        <p><img src="./images/Urban_Analytics.jpg" alt="GDSL" class="pull-left gap-right"></p>
 			<p>For more information about my book Urban Analytics see the <a href="https://uk.sagepub.com/en-gb/eur/urban-analytics/book249267">publishers</a> page, or for supporting materials my <a href = "https://github.com/alexsingleton/urban_analytics
 ">github</a>.</p>
 		</div>
