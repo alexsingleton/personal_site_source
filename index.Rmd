@@ -26,7 +26,7 @@ title: ""
         <div class="col-md-6">
           <h2>MSc Geographic Data Science</h2>
           <img src="./images/MSCGDS.png" alt="GDSL" class="pull-left gap-right">
-          <p>University of Liverpool established the world's first MSc in Geographic Data Science, and is accepting applications. We have an <a href ="https://spark.adobe.com/page/e6XbJ/">e-brochure</a>, and you can click <a href="https://www.liverpool.ac.uk/study/postgraduate/taught/geographic-data-science-msc/overview/">here</a> to get an overview of the course or find out how to apply.</p>
+          <p>University of Liverpool established the world's first MSc in Geographic Data Science, and is accepting applications. Click <a href="https://www.liverpool.ac.uk/study/postgraduate/taught/geographic-data-science-msc/overview/">here</a> to get an overview of the course and find out how to apply.</p>
         </div>
         <div class="col-md-6">
           <h2>Geographic Data Science Lab</h2>
