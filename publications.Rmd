@@ -2,33 +2,59 @@
 title: "Publications"
 ---
 
-```{r echo=FALSE,warning=FALSE,message=FALSE}
-library(RefManageR)
-```
+# Books
 
-#Books
-```{r echo=FALSE, results="asis",comment=FALSE}
-file_books <- ReadBib("books.bib")
-dates <- unlist(unique(file_books$year))[order(unlist(unique(file_books$year)),decreasing = TRUE)]
-#Prints recerences
-for (date in dates) {
-  print(file_books[list(year=date)],.opts = list(style="markdown",bib.style ="authoryear" ,max.names =10,dashed=FALSE))
-  cat("\n")
-}
+* Longley P, Cheshire J, Singleton A (2018) [Consumer Data Analytics](https://www.ucl.ac.uk/ucl-press/browse-books/consumer-data-research). London: UCL Press.
+* Singleton A, Spielman S, Folch D (2018) [Urban Analytics](https://uk.sagepub.com/en-gb/eur/urban-analytics/book249267). London: Sage.
+* Ivan I, Singleton A, Horák J, Inspektor T (2016) [The Rise of Big Spatial Data](https://link.springer.com/book/10.1007/978-3-319-45123-7). Berlin: Springer.
+Brunsdon C, Singleton A (2014) [Geocomputation, A Practical Primer](https://uk.sagepub.com/en-gb/eur/geocomputation/book241023). London: Sage.
+* Singleton A (2010) [Educational Opportunity: The Geography of Access to Higher Education](https://www.routledge.com/Educational-Opportunity-The-Geography-of-Access-to-Higher-Education-1st/Singleton/p/book/9780754678670). Farham: Ashgate.
 
-```
 
-#Journal Articles
-```{r echo=FALSE, results="asis",comment=FALSE}
-file_journals <- ReadBib("journals.bib")
-dates <- unlist(unique(file_journals$year))[order(unlist(unique(file_journals$year)),decreasing = TRUE)]
+# Refereed Academic Journals
 
-#Prints recerences
-for (date in dates) {
-  cat(paste0("##",date),"\n")
-  print(file_journals[list(year=date)],.opts = list(style="markdown",bib.style ="authoryear" ,max.names =10,dashed=FALSE))
-  cat("\n")
-}
-
-```
-
+* Thiele T, Pope D, Singleton A, Stanistreet D (2018) Exploring the Use of Mixed Methods in Research and Evaluation of Widening Participation Interventions: Guidance for Practitioners. Widening Participation and Lifelong Learning 20(4) 7-38 https://doi.org/10.5456/WPLL.20A.7 
+* Davies A, Green M, Singleton A (2018) Using Machine learning to investigate self-medication purchasing in England via high street retailer loyalty card data. PLoS ONE 13(11) e020752. https://doi.org/10.1371/journal.pone.0207523 
+* Green M, Daras K, Davies A, Barr B, Singleton A (2018) Developing an Openly Accessible Multi-Dimensional Small Area Index of 'Access to Healthy Assets and Hazards' for Great Britain, 2016. Health & Place 54 11-19 https://doi.org/10.1016/j.healthplace.2018.08.019 
+* Chen M, Arribas-Bel D, Singleton, A (2018) Understanding the dynamics of urban areas of interest through volunteered geographic information. Journal of Geographical Systems https://doi.org/10.1007/s10109 
+* Pavlis M, Dolgea L, Singleton A (2017) A Modified DBSCAN Clustering Method to Estimate Retail Center Extent. Geographical Analysis 50 (2) 141-161 http://dx.doi.org/10.1111/gean.12138 
+* Dolgea L,  Pavlis M,  Singleton A (2016) Estimating Attractiveness Hierarchy and Catchment Area Extents for a National set of Retail Centre Agglomerations. Journal of Retailing and Consumer Services 28 78-90 https://doi.org/10.1016/j.jretconser.2015.08.013
+* Gale C, Singleton A, Longley P (2016) Creating the 2011 Area Classification for Output Areas (2011 OAC). Journal of Spatial Information Science 12 1-27 https://doi.org/10.5311/JOSIS.2016.12.232
+* Alexiou A, Singleton A, Longley P (2016) A Classification of Multidimensional Open Data of Urban Morphology. Built Environment 42(3) 382-395 https://doi.org/10.2148/benv.42.3.382 
+* Singleton A, Dolgea L, Pavlis M, Longley P (2016) Measuring the Spatial Vulnerability of Retail Centres to Online Consumption through a Framework of e-Resilience. Geoforum 69 5-18 https://doi.org/10.1016/j.geoforum.2015.11.013
+* Singleton A, Longley P, Pavlis M (2016) The Stability of Geodemographic Cluster Assignments over an Inter-censal period. Journal of Geographical Systems 18(2) 97-123  https://doi.org/10.1007/s10109-016-0226-x 
+* Singleton A, Spielman S, Brunsdon C (2016) Establishing a Framework for Open Geographic Information Science. International Journal Of Geographical Information Science 30(8) 1507-1521 https://doi.org/10.1080/13658816.2015.1137579 
+* Thiele T, Pope D, Singleton A, Snape D, Stanistreet D (2016) Experience of Disadvantage: The Influence of Identity on Engagement in Working Class Students' Educational Trajectories to an Elite University. British Educational Research Journal 43(1) 49-67  https://doi.org/10.1002/berj.3251 
+* Thiele T, Pope D, Singleton A, Stanistreet D (2016) Role of Students' Context in Predicting Academic Performance at a Medical School: A Retrospective Cohort Study. BMJ Open 6(3) e010169 https://dx.doi.org/10.1136/bmjopen-2015-010169 
+* Singleton A (2015) Transport Mode Choice and the Commute to Work. Environment and Planning A 47(7) 1401-1403 http://dx.doi.org/10.1177/0308518X15595752 
+* Singleton A and P Longley (2015) The Internal Structure of Greater London: A Comparison of National and Regional Geodemographic Models. Geo: Geography and Environment 21 69-87 https://doi.org/10.1002/geo2.7 
+* Spielman S, Singleton A (2015) Studying Neighborhoods Using Uncertain Data from the American Community Survey: A Contextual Approach. Annals of the Association of American Geographers 105(5) 1003-1025 https://doi.org/10.1080/00045608.2015.1052335
+* Bearman N, Singleton A (2014) Modelling the Potential Impact on CO2 Emissions of an Increased Uptake of Active Travel for the Home to School Commute using Individual Level Data.  Journal of Transport and Health 14 295-304 https://doi.org/10.1016/j.jth.2014.09.009
+* Harris R, Nicholas N, Souch C, Singleton A, Orford S, Keylock C, Jarvis C, Brunsdon C (2014) Geographers Count: A Report on Quantitative Methods in Geography. Enhancing Learning in the Social Sciences 6(2) 43-58 https://doi.org/10.11120/elss.2014.00035 
+* Riddlesden D, Singleton A (2014) Broadband Speed Equity: A new Digital Divide? Applied Geography 52 25-33 https://doi.org/10.1016/j.apgeog.2014.04.008 
+* Singleton A, Brunsdon C (2014) Escaping the Pushpin Paradigm in Geographic Information Science: (Re)presenting National Crime Data. Area 46(3) 294-304 https://doi.org/10.1111/area.12116 
+* Thiele T, Singleton A, Pope D, Stanistreet D (2014) Predicting Students' Academic Performance Based on School and Socio-Demographic Characteristics. Studies in Higher Education 41(8) 1424-1446 https://doi.org/10.1080/03075079.2014.974528 
+* Adnan M, Singleton A, Longley P (2013) OACoder: Postcode Coding Tool. Journal of Open Research Software 11 p e5 https://doi.org/10.5334/511ba2c94d661 
+* Phillips R, Frost D, Singleton A (2013) Researching the Riots. The Geographical Journal 179(1) 3-10 https://doi.org/10.1111/j.1475-4959.2012.00463.x 
+* Singleton A (2013) A GIS Approach to Modelling CO2 Emissions Associated with the Pupil-School Commute. International Journal of Geographical Information Science 28(2) 256-273 https://doi.org/10.1080/13658816.2013.832765 
+* Singleton A, Spielman S (2013) The Past Present and Future of Geodemographic Research in the United States and United Kingdom. Professional Geographer 66(4) 558-567 https://doi.org/10.1080/00330124.2013.848764 
+* Riddlesden D, Singleton A, Fischer T (2012) A Survey of the use of Geographic Information Systems in English Local Authority Impact Assessments. Journal of Environmental Assessment Policy and Management 14(01) https://doi.org/10.1142/S1464333212500068  
+* Singleton A (2012) The Geodemographics of Access and Participation in Geography. The Geographical Journal 178(3 )216-229 https://doi.org/10.1111/j.1475-4959.2012.00467.x 
+* Singleton A, Wilson A, O'Brien O (2012) Geodemographics and Spatial Interaction: An Integrated Model for Higher Education. Journal of Geographical Systems 14(2) 223-241 https://doi.org/10.1007/s10109-010-0141-5
+* Brunsdon C, Longley P, Singleton A, Ashby D (2011) Predicting Participation in Higher Education: a Comparative Evaluation of the Performance of Geodemographic Classifications. Journal of the Royal Statistical Society: Series A (Statistics in Society) 174(1) 17-30 https://doi.org/10.1111/j.1467-985X.2010.00641.x 
+* Mateos P, de Smith M, Singleton A (2011) Developments in Quantitative Human Geography Urban Modelling and Geographic Information Science. Transactions in GIS 15(3) 249-252 https://doi.org/10.1111/j.1467-9671.2011.01258.x 
+* Singleton A, Lewis D (2011) Including Accident Information in Automatic Bicycle Route Planning for Urban Areas. Urban Studies Research 1-10 http://dx.doi.org/10.1155/2011/362817 
+* Singleton A, Longley P, Allen R, O'Brien O (2011) Estimating Secondary School Catchment Areas and the Spatial Equity of Access. Computers Environment and Urban Systems 35(3) 241-249 https://doi.org/10.1016/j.compenvurbsys.2010.09.006 
+* Adnan M, Longley P, Singleton A, Brunsdon C (2010) Towards Real-Time Geodemographics: Clustering Algorithm Performance for Large Multidimensional Spatial Databases. Transactions in GIS 14(3) 283-297 https://doi.org/10.1111/j.1467-9671.2010.01197.x 
+* Cheshire J, Longley P, Singleton A (2010) The Surname Regions of Great Britain. Journal of Maps 61 401-409    https://doi.org/10.4113/jom.2010.1103 
+* Harris R, Singleton A, Grose D, Brunsdon C, Longley P (2010) Grid-enabling Geographically Weighted Regression: A Case Study of Participation in Higher Education in England. Transactions in GIS 14(1)43-61 https://doi.org/10.1111/j.1467-9671.2009.01181.x 
+* Longley P, Singleton A, Yano K, Nakaya T (2010) Lost in Translation: Cross-Cultural Experiences in Teaching Geo-Genealogy. Journal of Geography in Higher Education 34(1) 21-38 https://doi.org/10.1080/03098260902982476 
+* Singleton A (2010) The Geodemographics of Educational Progression and their Implications for Widening Participation in Higher Education. Environment and Planning A 42(11) 2560-2580 https://doi.org/10.1068/a42394  
+* Longley P  Singleton A (2009) Classification Through Consultation: Public Views Of The Geography Of The E-Society. International Journal of Geographical Information Science 23(6) 737-763 https://doi.org/10.1080/13658810701704652 
+* Longley P, Singleton A (2009) Linking Social Deprivation and Digital Exclusion in England. Urban Studies 46(7) 1275-1298 https://doi.org/10.1177/0042098009104566 
+* Mateos P, Singleton A, Longley P (2009) Uncertainty in the Analysis of Ethnicity Classifications: Issues of Extent and Aggregation of Ethnic Groups. Journal of Ethnic and Migration Studies 35(9) 1437-1460 https://doi.org/10.1080/13691830903125919 
+* Singleton A (2009) Data Mining Course Choice Sets and Behaviours for Target Marketing of Higher Education Journal of Targeting Measurement and Analysis for Marketing. 17(3) 157-170 https://doi.org/10.1057/jt.2009.13 
+* Singleton A, Longley P (2009) Creating Open Source Geodemographics - Refining a National Classification of Census Output Areas for Applications in Higher Education. Papers in Regional Science 88(3) 643-666 https://doi.org/10.1111/j.1435-5957.2008.00197.x 
+* Singleton A, Longley P (2009) Geodemographics Visualisation and Social Networks in Applied Geography. Applied Geography 29(3)  89-298 https://doi.org/10.1016/j.apgeog.2008.10.006 
+* Gibin M, Singleton A, Milton R, Mateos P, Longley P (2008) An Exploratory Cartographic Visualisation of London through the Google Maps API. Applied Spatial Analysis and Policy 12 85-97 https://doi.org/10.1007/s12061-008-9005-5 
+* Haklay M, Singleton A, Parker C (2008) Web Mapping 2.0: The Neogeography of the GeoWeb. Geography Compass 26 2011-2039 https://doi.org/10.1111/j.1749-8198.2008.00167.x 

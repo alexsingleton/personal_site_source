@@ -7,22 +7,10 @@ navbar:
       href: publications.html
     - text: "CV"
       icon: fa-file  fa-2x
-      href: cv.html
-    - text: "GDSL Blog"
+      href: https://www.dropbox.com/s/s9z5pzioi4mth1p/Alex_Singleton.pdf?dl=0
+    - text: "GDSL Website"
       icon: fa-thumbs-up fa-2x
       href: http://www.geographicdatascience.org
-    - text: "Presentations"
-      icon: fa-slideshare fa-2x
-      href: https://speakerdeck.com/alexsingleton
-    - text: "Videos"
-      icon: fa-video-camera fa-2x
-      menu:
-        - text: "YouTube"
-          icon: fa-youtube  fa-2x
-          href: https://www.youtube.com/playlist?list=PL-UaqBHqfc-H0HfqgOeFFyP17KnkG-aSY
-        - text: "Vimeo"
-          icon: fa-vimeo  fa-2x
-          href: https://vimeo.com/album/4097174
   right:
     - icon: fa-github fa-2x
       href: https://github.com/alexsingleton
